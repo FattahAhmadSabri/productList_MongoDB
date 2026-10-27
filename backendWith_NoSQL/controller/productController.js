@@ -1,0 +1,35 @@
+const {createProductService, getAllProductService} = require("../service/productService")
+const {
+  successResponse,
+  errorResponse,
+} = require("../middleware/responseMiddleware")
+const createProductController =async (req,res)=>{
+     try {
+       const {title,price,description,imageUrl} =req.body
+        const response = await createProductService(title,price,description,imageUrl)
+        successResponse(res,
+  message = "Success",
+  response,
+  statusCode = 201)
+     } catch (error) {
+        errorResponse(  res,
+  message = error.message,
+  statusCode = 500)
+     }
+}
+
+const getAllProductController=async (req,res)=>{
+      try {
+          const response = await getAllProductService()
+          successResponse(res,
+  message = "Success",
+  response,
+  statusCode = 200)
+      } catch (error) {
+        errorResponse(  res,
+  message = error.message,
+  statusCode = 500)
+      }
+}
+
+module.exports = {createProductController, getAllProductController}
