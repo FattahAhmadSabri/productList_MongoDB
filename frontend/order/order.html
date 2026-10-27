@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEase | Checkout</title>
+    <link rel="stylesheet" href="order.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <a href="../home/home.html" class="logo">ShopEase</a>
+      <nav>
+        <a href="../home/home.html">Products</a>
+        <a href="../cart/cart.html">My Cart</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>Checkout</h1>
+      <p class="subtitle">Review your order before placing it.</p>
+
+      <p id="message" class="message" role="status"></p>
+
+      <div id="checkoutContent" class="checkout-layout">
+        <section class="panel">
+          <h2>Order Items</h2>
+          <div id="orderItems">
+            <p>Loading cart items...</p>
+          </div>
+        </section>
+
+        <aside class="panel summary">
+          <h2>Order Summary</h2>
+
+          <div class="summary-row">
+            <span>Total items</span>
+            <span id="itemCount">0</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="subtotal">₹0.00</span>
+          </div>
+
+          <div class="summary-row total">
+            <span>Total amount</span>
+            <span id="total">₹0.00</span>
+          </div>
+
+          <button id="placeOrderBtn" disabled>Place Order</button>
+          <a href="../cart/cart.html" class="back-link">Back to Cart</a>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2026 ShopEase. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="order.js" defer></script>
+  </body>
+</html>
