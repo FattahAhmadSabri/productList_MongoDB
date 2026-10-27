@@ -22,4 +22,9 @@ const createOrderService = async (userId) => {
   return orders;
 };
 
-module.exports = { createOrderService };
+const getOrderService = (userId) => {
+  const response = Order.find({ userId: userId }).populate("productId");
+  return response;
+};
+
+module.exports = { createOrderService, getOrderService };

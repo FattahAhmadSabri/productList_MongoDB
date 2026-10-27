@@ -1,4 +1,4 @@
-const { createOrderService } = require("../service/orderService");
+const { createOrderService, getOrderService } = require("../service/orderService");
 
 const {
   successResponse,
@@ -17,4 +17,14 @@ const createOrderController = async (req, res) => {
   }
 };
 
-module.exports = { createOrderController };
+const getOrderController = async(req,res)=>{
+    try {
+        const userId = req.user.id
+        const response = await getOrderService(userId)
+        return successResponse(res, "Order created successfully", response, 200);
+    } catch (error) {
+       return errorResponse(res, error.message, 500); 
+    }
+}
+
+module.exports = { createOrderController, getOrderController };

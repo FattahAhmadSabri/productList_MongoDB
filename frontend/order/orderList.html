@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEase | My Orders</title>
+    <link rel="stylesheet" href="orderList.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <a href="../home/home.html" class="logo">ShopEase</a>
+
+      <nav>
+        <a href="../home/home.html">Products</a>
+        <a href="../cart/cart.html">My Cart</a>
+        <a href="order-list.html" class="active">My Orders</a>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="page-heading">
+        <div>
+          <h1>My Orders</h1>
+          <p>Track and review your purchases.</p>
+        </div>
+
+        <a href="../home/home.html" class="shop-btn">Continue Shopping</a>
+      </section>
+
+      <p id="message" class="message" role="status"></p>
+
+      <section class="orders-panel">
+        <div class="orders-header">
+          <h2>Order History</h2>
+          <button id="refreshBtn" class="refresh-btn">Refresh</button>
+        </div>
+
+        <div id="ordersList">
+          <p class="empty-state">Loading your orders...</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 ShopEase. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="orderList.js" defer></script>
+  </body>
+</html>
