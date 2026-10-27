@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEase | My Cart</title>
+    <link rel="stylesheet" href="cart.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <a href="../home/home.html" class="logo">ShopEase</a>
+
+      <nav>
+        <a href="../home/home.html">Products</a>
+        <a href="cart.html" class="active">My Cart</a>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>My Shopping Cart</h1>
+      <p class="subtitle">Review your items before checkout.</p>
+
+      <p id="message" class="message" role="status"></p>
+
+      <div class="cart-layout">
+        <section class="cart-items">
+          <div class="cart-heading">
+            <h2>Cart Items</h2>
+            <button id="refreshBtn" class="refresh-btn">Refresh</button>
+          </div>
+
+          <div id="cartList">
+            <p class="empty-state">Loading your cart...</p>
+          </div>
+        </section>
+
+        <aside class="summary">
+          <h2>Order Summary</h2>
+
+          <div class="summary-row">
+            <span>Items</span>
+            <span id="itemCount">0</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="subtotal">₹0.00</span>
+          </div>
+
+          <div class="summary-row total-row">
+            <span>Total</span>
+            <span id="total">₹0.00</span>
+          </div>
+
+          <button id="checkoutBtn" class="checkout-btn">
+            Proceed to Checkout
+          </button>
+
+          <a href="../home/home.html" class="continue-link">
+            Continue Shopping
+          </a>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2026 ShopEase. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="cart.js" defer></script>
+  </body>
+</html>

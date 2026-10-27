@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEase | Products</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <a href="home.html" class="logo">ShopEase</a>
+
+      <div class="nav-actions">
+        <a href="home.html">Products</a>
+        <a href="../cart/cart.html">My Cart</a>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="page-heading">
+        <div>
+          <h1>Explore Products</h1>
+          <p>Find something you'll love.</p>
+        </div>
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search products..."
+          aria-label="Search products"
+        />
+      </section>
+
+      <p id="message" class="message" role="status"></p>
+
+      <section id="productList" class="product-grid">
+        <!-- Products will be rendered here by JavaScript -->
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 ShopEase. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="home.js" defer></script>
+  </body>
+</html>
