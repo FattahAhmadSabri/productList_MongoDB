@@ -22,7 +22,10 @@ const loginService = async(email,password)=>{
 
 }
 
-const updateUserService = (id, name, email, mobile, password) => {
+const updateUserService = (id,UserId, name, email, mobile, password) => {
+  if (id !== UserId && role !== "admin") {
+    throw new Error("You are not authorized to update this user");
+  }
   const response = User.findByIdAndUpdate(
     id,
     { name, email, mobile, password },

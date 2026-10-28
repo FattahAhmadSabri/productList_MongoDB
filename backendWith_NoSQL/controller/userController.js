@@ -23,9 +23,10 @@ const createUserController = async (req, res) => {
 
 const updateUserController = async (req, res) => {
   try {
+     const userId = req.user.id
     const { name, email, mobile, password } = req.body;
     const { id } = req.params;
-    const response = await updateUserService(id, name, email, mobile, password);
+    const response = await updateUserService(id,userId, name, email, mobile, password);
     successResponse(res, (message = "Success"), response, (statusCode = 200));
   } catch (error) {
     errorResponse(res, (message = error.message), (statusCode = 500));
